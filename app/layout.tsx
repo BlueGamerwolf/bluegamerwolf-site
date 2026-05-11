@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Blue Gamerwolf | Voidstone",
+  title: "Blue Gamerwolf",
   description:
     "Warden-inspired Minecraft modding, Sculk-powered systems, Forge & Fabric development, backend engineering, and experimental void-forged ecosystems by Blue Gamerwolf.",
 
