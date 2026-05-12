@@ -36,7 +36,7 @@ const partners = [
     ],
   },
   {
-    name: "Kags",
+    name: "Kag",
     description: "Wild energy, gaming content, and streams.",
     links: [
       {
@@ -50,7 +50,7 @@ const partners = [
     ],
   },
   {
-    name: "Justbetters",
+    name: "Justbetter",
     description: "Streams, gaming content, and collabs.",
     links: [
       {
@@ -97,6 +97,16 @@ const partners = [
       },
     ],
   },
+  {
+    name: "The Mystical Vineyard",
+    description: "A place for gamers, nerds, streamers, and all-around good vibes.",
+    links: [
+      {
+        label: "Discord",
+        url: "https://discord.gg/B3H9NNTP6T",
+      },
+    ],
+  }
 ];
 
 export default function PartnersPage() {
