@@ -127,7 +127,7 @@ export default function PartnersPage() {
               key={partner.name}
               className="group relative overflow-hidden rounded-3xl border border-purple-500/20 bg-zinc-950/70 p-8 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/60 hover:shadow-purple-900/40"
             >
-              <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.18),transparent_70%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.18),transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
               <div className="relative z-10">
                 <div className="mb-6 flex items-center gap-4">
