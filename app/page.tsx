@@ -18,7 +18,7 @@ export default function Home() {
           <div className="flex gap-6 text-sm md:text-base">
 
             <Link
-              href="/partner"
+              href="/partners"
               className="text-zinc-300 transition hover:text-purple-300"
             >
               Partners
