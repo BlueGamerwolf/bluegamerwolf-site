@@ -13,39 +13,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Blue Gamerwolf",
+  title: {
+    default: "Blue Gamerwolf | Voidstone",
+    template: "%s | Blue Gamerwolf",
+  },
   description:
-    "Warden-inspired Minecraft modding, Sculk-powered systems, Forge & Fabric development, backend engineering, and experimental void-forged ecosystems by Blue Gamerwolf.",
-
+    "Warden-inspired Minecraft modding, Sculk-powered systems, Forge and Fabric development, backend engineering, and experimental void-forged ecosystems by Blue Gamerwolf.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
-
   openGraph: {
     title: "Blue Gamerwolf | Voidstone",
     description:
-      "Enter the depths of Voidstone — a dark Minecraft modding ecosystem forged through Sculk, Warden energy, and experimental systems.",
+      "A dark Minecraft modding ecosystem forged through Sculk, Warden energy, and experimental systems.",
     url: "https://www.voidstone.dev",
     siteName: "Voidstone",
-    images: [
-      {
-        url: "/banner.png",
-        width: 1200,
-        height: 630,
-        alt: "Voidstone Banner",
-      },
-    ],
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Blue Gamerwolf | Voidstone",
     description:
-      "Forge & Fabric mods, Warden vibes, backend systems, and void-forged creations.",
-    images: ["/banner.png"],
+      "Forge and Fabric mods, Warden vibes, backend systems, and void-forged creations.",
   },
 };
 
@@ -59,9 +49,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-black text-white">
-        {children}
-      </body>
+      <body className="min-h-full bg-black text-white">{children}</body>
     </html>
   );
 }
