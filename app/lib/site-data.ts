@@ -106,11 +106,6 @@ export const partners = [
     links: [{ label: "Twitch", url: "https://www.twitch.tv/coolblacksage04?csr=a" }],
   },
   {
-    name: "Jackko",
-    description: "Streamer and Voidstone collaborator.",
-    links: [{ label: "Twitch", url: "https://www.twitch.tv/oniimouto" }],
-  },
-  {
     name: "Kag",
     description: "Gaming content, streams, and creator energy.",
     links: [
