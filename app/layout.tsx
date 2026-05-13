@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Blue Gamerwolf | Voidstone",
+    default: "Blue Gamerwolf",
     template: "%s | Blue Gamerwolf",
   },
   description:
