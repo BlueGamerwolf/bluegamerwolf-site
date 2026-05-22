@@ -1,0 +1,11 @@
+name = "voidlink-relay"
+main = "src/index.ts"
+compatibility_date = "2026-05-13"
+
+[[durable_objects.bindings]]
+name = "VOIDLINK_ROOMS"
+class_name = "VoidLinkRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["VoidLinkRoom"]

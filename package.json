@@ -6,12 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "voidlink:relay": "node voidlink-relay/server.mjs",
+    "voidlink:cf:install": "npm install --prefix voidlink-cloudflare-relay",
+    "voidlink:cf:dev": "npm run dev --prefix voidlink-cloudflare-relay",
+    "voidlink:cf:typecheck": "npm run typecheck --prefix voidlink-cloudflare-relay",
+    "voidlink:cf:deploy": "npm run deploy --prefix voidlink-cloudflare-relay"
   },
   "dependencies": {
     "next": "16.2.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
