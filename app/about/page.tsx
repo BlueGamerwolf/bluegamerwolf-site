@@ -14,14 +14,15 @@ export const metadata: Metadata = {
 };
 
 const profile = {
-  name: "Blue Gamerwolf (Joshua Thomas Ward)",
+  displayName: "Blue Gamerwolf",
+  realName: "Joshua Thomas Ward",
   location: "United States, Delaware (EST timezone)",
   email: "bluemoonsmp1231@gmail.com",
-  phone: "+1 (302) 833-9865)",
+  phone: "+1 (302) 833-9865",
 };
 
 const contactItems = [
-  { label: "Name", value: profile.name },
+  { label: "Name", value: profile.realName },
   { label: "Location", value: profile.location },
   { label: "Email", value: profile.email },
   { label: "Phone", value: profile.phone },
@@ -53,7 +54,7 @@ export default function AboutPage() {
     <SiteShell active="/about" footerLabel="About Blue Gamerwolf">
       <Hero
         eyebrow="About"
-        title={profile.name}
+        title={profile.displayName}
         subtitle="Creator, Minecraft modder, backend builder, and community organizer."
         description="This page is a quick introduction to who I am, what I build, where I am based, and how people can reach me."
         accent="purple"
@@ -62,9 +63,11 @@ export default function AboutPage() {
             <ActionLink href="/projects" accent="cyan">
               View Projects
             </ActionLink>
+
             <ActionLink href="/mods" accent="orange">
               View Mods
             </ActionLink>
+
             <ActionLink href="/channels" accent="indigo">
               My Channels
             </ActionLink>
@@ -82,12 +85,15 @@ export default function AboutPage() {
             <span className="rounded-lg border border-cyan-300/30 bg-cyan-300/10 px-4 py-3 text-sm font-bold text-cyan-100">
               Minecraft Mods
             </span>
+
             <span className="rounded-lg border border-purple-300/30 bg-purple-300/10 px-4 py-3 text-sm font-bold text-purple-100">
               Open Source
             </span>
+
             <span className="rounded-lg border border-pink-300/30 bg-pink-300/10 px-4 py-3 text-sm font-bold text-pink-100">
               Creator Spaces
             </span>
+
             <span className="rounded-lg border border-emerald-300/30 bg-emerald-300/10 px-4 py-3 text-sm font-bold text-emerald-100">
               Backend Tools
             </span>
@@ -108,6 +114,7 @@ export default function AboutPage() {
                 <dt className="text-xs font-bold uppercase tracking-[0.18em] text-zinc-500">
                   {item.label}
                 </dt>
+
                 <dd className="mt-2 break-words text-lg font-black text-white">
                   {item.value}
                 </dd>
@@ -123,6 +130,7 @@ export default function AboutPage() {
           description="The main areas people will usually find me building around."
           accent="purple"
         />
+
         <div className="grid gap-5 md:grid-cols-3">
           {focusAreas.map((area) => (
             <InfoCard
