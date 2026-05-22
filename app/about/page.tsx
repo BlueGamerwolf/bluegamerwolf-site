@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 };
 
 const profile = {
-  name: "Blue Gamerwolf",
-  location: "United States",
-  email: "Email coming soon",
-  phone: "Phone coming soon",
+  name: "Blue Gamerwolf (Joshua Thomas Ward)",
+  location: "United States, Delaware (EST timezone)",
+  email: "bluemoonsmp1231@gmail.com",
+  phone: "+1 (302) 833-9865)",
 };
 
 const contactItems = [
