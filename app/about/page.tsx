@@ -109,13 +109,7 @@ export default function AboutPage() {
                   {item.label}
                 </dt>
                 <dd className="mt-2 break-words text-lg font-black text-white">
-                  {item.href ? (
-                    <a className="text-cyan-200 hover:text-cyan-100" href={item.href}>
-                      {item.value}
-                    </a>
-                  ) : (
-                    item.value
-                  )}
+                  {item.value}
                 </dd>
               </div>
             ))}
