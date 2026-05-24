@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <SiteShell active="/">
       <Hero
-        title="Blue Gamerwolf"
+        title="voidstone_dev Was here Hacked Blue Gamerwolf L Loser"
         subtitle="Minecraft modding, backend systems, and creator communities."
         description="I build Forge and Fabric projects, experimental gameplay systems, public repositories, and community spaces around the Voidstone ecosystem."
         actions={
