@@ -141,6 +141,13 @@ export const partners = [
     ],
   },
   {
+    name: "Nova",
+    description: "Gaming content, streams, and community collaborations.",
+    links: [{ label: "Twitch", url: "https://www.twitch.tv/dark_martha" },
+      { label: "YouTube", url: "https://www.youtube.com/@dark_martha" }
+    ],
+  },
+  {
     name: "The Mystical Vineyard",
     description: "A place for gamers, nerds, streamers, and good community energy.",
     links: [{ label: "Discord", url: "https://discord.gg/B3H9NNTP6T" }],
