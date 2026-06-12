@@ -255,7 +255,15 @@ function LinkOrAnchor({
 function SiteFooter({ label }: { label: string }) {
   return (
     <footer className="relative z-10 border-t border-white/10 bg-black/40 px-6 py-8 text-center text-sm text-zinc-500">
-      &copy; 2026 Blue Gamerwolf - {label}
+      <div>&copy; 2026 Blue Gamerwolf - {label}</div>
+      <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2">
+        <Link href="/terms" className="hover:text-cyan-200">
+          Terms of Service
+        </Link>
+        <Link href="/privacy" className="hover:text-cyan-200">
+          Privacy Policy
+        </Link>
+      </div>
     </footer>
   );
 }
