@@ -191,7 +191,7 @@ export const communities = [
   },
   {
     name: "Warden Nation",
-    url: "https://discord.gg/VZCxzGbtKV",
+    url: "https://discord.gg/d8M2XHeQ4Z",
     description:
       "A community around Blue Gamerwolf channels, fan projects, content, and Minecraft discussion.",
     accent: "cyan",
