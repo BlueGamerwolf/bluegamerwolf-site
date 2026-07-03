@@ -147,11 +147,6 @@ export const partners = [
       { label: "YouTube", url: "https://www.youtube.com/@dark_martha" }
     ],
   },
-  {
-    name: "The Mystical Vineyard",
-    description: "A place for gamers, nerds, streamers, and good community energy.",
-    links: [{ label: "Discord", url: "https://discord.gg/B3H9NNTP6T" }],
-  },
 ];
 
 export const platforms = [
@@ -196,7 +191,7 @@ export const communities = [
   },
   {
     name: "Warden Nation",
-    url: "https://discord.gg/784g7mNtHC",
+    url: "https://discord.gg/VZCxzGbtKV",
     description:
       "A community around Blue Gamerwolf channels, fan projects, content, and Minecraft discussion.",
     accent: "cyan",
