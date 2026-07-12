@@ -133,14 +133,6 @@ export const partners = [
     links: [{ label: "YouTube", url: "https://www.youtube.com/@Chaosduck" }],
   },
   {
-    name: "Siren",
-    description: "Streams, short-form content, and creator collaborations.",
-    links: [
-      { label: "TikTok", url: "https://vm.tiktok.com/ZN9FSndxwhC4L-Cvdbj/" },
-      { label: "Twitch", url: "https://www.twitch.tv/sirenkissfromhell0" },
-    ],
-  },
-  {
     name: "Nova",
     description: "Gaming content, streams, and community collaborations.",
     links: [{ label: "Twitch", url: "https://www.twitch.tv/dark_martha" },
