@@ -136,7 +136,8 @@ export const partners = [
     name: "Nova",
     description: "Gaming content, streams, and community collaborations.",
     links: [{ label: "Twitch", url: "https://www.twitch.tv/dark_martha" },
-      { label: "YouTube", url: "https://www.youtube.com/@dark_martha" }
+      { label: "YouTube", url: "https://www.youtube.com/@dark_martha" },
+            {label: "Website", url: "https://www.nightfallsyndicate.dev"}
     ],
   },
 ];
