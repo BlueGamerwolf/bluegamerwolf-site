@@ -146,12 +146,14 @@ export const platforms = [
   {
     name: "GitHub",
     url: "https://github.com/BlueGamerwolf",
-    description: "Repositories, Minecraft mods, backend systems, APIs, and experiments.",
+    description:
+      "Repositories, Minecraft mods, backend systems, APIs, tools, and experimental projects.",
     accent: "cyan",
   },
   {
     name: "YouTube",
-    description: "Development, gaming, tutorials, livestream archives, and creator projects across multiple channels.",
+    description:
+      "Content spread across multiple channels including development, Minecraft, livestreams, tutorials, clips, and project showcases.",
     accent: "red",
     links: [
       {
@@ -159,32 +161,42 @@ export const platforms = [
         url: "https://www.youtube.com/@blue_gamerwolf",
       },
       {
-        label: "DJBlue Rbx",
-        url: "https://www.youtube.com/@DJBlue-Rbx",
+        label: "Second Channel",
+        url: "https://www.youtube.com/@YOUR_SECOND_CHANNEL",
       },
       {
-        label: "Blue's Stream Reposts",
-        url: "https://www.youtube.com/@Blue_GamerwolfsSR",
+        label: "Third Channel",
+        url: "https://www.youtube.com/@YOUR_THIRD_CHANNEL",
+      },
+      {
+        label: "Fourth Channel",
+        url: "https://www.youtube.com/@YOUR_FOURTH_CHANNEL",
       },
     ],
   },
   {
     name: "Twitch",
     url: "https://twitch.tv/blue_gamerwolf",
-    description: "Livestreams for Minecraft development, modpacks, testing, and community work.",
+    description:
+      "Livestreams featuring Minecraft development, coding sessions, community events, testing, and gameplay.",
     accent: "purple",
   },
   {
     name: "Kick",
     url: "https://kick.com/blue-gamerwolf",
-    description: "Alternative livestream platform for gameplay, coding sessions, and experiments.",
+    description:
+      "Alternative livestream platform for gameplay, coding sessions, experiments, and community interaction.",
     accent: "green",
   },
 ] satisfies {
   name: string;
-  url: string;
   description: string;
   accent: Accent;
+  url?: string;
+  links?: {
+    label: string;
+    url: string;
+  }[];
 }[];
 
 export const communities = [
