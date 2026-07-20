@@ -151,9 +151,22 @@ export const platforms = [
   },
   {
     name: "YouTube",
-    url: "https://www.youtube.com/@blue_gamerwolf",
-    description: "Development showcases, mod previews, gameplay videos, tutorials, and updates.",
+    description: "Development, gaming, tutorials, livestream archives, and creator projects across multiple channels.",
     accent: "red",
+    links: [
+      {
+        label: "Blue Gamerwolf",
+        url: "https://www.youtube.com/@blue_gamerwolf",
+      },
+      {
+        label: "DJBlue Rbx",
+        url: "https://www.youtube.com/@DJBlue-Rbx",
+      },
+      {
+        label: "Blue's Stream Reposts",
+        url: "https://www.youtube.com/@Blue_GamerwolfsSR",
+      },
+    ],
   },
   {
     name: "Twitch",
