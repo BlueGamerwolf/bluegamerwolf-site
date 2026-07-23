@@ -76,4 +76,26 @@ const sections = [
     title: "Contact",
     body: "Questions, concerns, or privacy requests can be sent to bluemoonsmp1231@gmail.com.",
   },
+  
 ];
+
+export default function PrivacyPage() {
+  return (
+    <SiteShell>
+      <Hero
+        title="Privacy Policy"
+        subtitle="Last updated: [Insert date]"
+        description="Privacy Policy for Blue Gamerwolf coded products, projects, mods, websites, tools, and related services."
+      />
+
+      <main className="space-y-8">
+        {sections.map((section) => (
+          <section key={section.title}>
+            <h2 className="text-2xl font-bold">{section.title}</h2>
+            <p className="mt-2 text-muted-foreground">{section.body}</p>
+          </section>
+        ))}
+      </main>
+    </SiteShell>
+  );
+}
