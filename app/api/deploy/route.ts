@@ -10,8 +10,6 @@ export async function POST(req: NextRequest) {
         );
     }
 
-    // Call Pterodactyl API here
-
     return NextResponse.json({
         success: true
     });

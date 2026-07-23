@@ -20,7 +20,7 @@ export default function ChannelsPage() {
             {platforms.map((platform) => (
               <ActionLink
                 key={platform.name}
-                href={platform.url}
+                href={platform.url ?? "#"}
                 accent={platform.accent}
                 external
               >
@@ -41,7 +41,7 @@ export default function ChannelsPage() {
           {platforms.map((platform) => (
             <CardLink
               key={platform.name}
-              href={platform.url}
+              href={platform.url ?? "#"}
               title={platform.name}
               description={platform.description}
               accent={platform.accent}

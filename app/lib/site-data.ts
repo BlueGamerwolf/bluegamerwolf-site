@@ -136,7 +136,8 @@ export const partners = [
     name: "Nova",
     description: "Gaming content, streams, and community collaborations.",
     links: [{ label: "Twitch", url: "https://www.twitch.tv/dark_martha" },
-      { label: "YouTube", url: "https://www.youtube.com/@dark_martha" }
+      { label: "YouTube", url: "https://www.youtube.com/@dark_martha" },
+            {label: "Website", url: "https://www.nightfallsyndicate.dev"}
     ],
   },
 ];
@@ -145,32 +146,45 @@ export const platforms = [
   {
     name: "GitHub",
     url: "https://github.com/BlueGamerwolf",
-    description: "Repositories, Minecraft mods, backend systems, APIs, and experiments.",
+    description:
+      "Repositories, Minecraft mods, backend systems, APIs, tools, and experimental projects.",
     accent: "cyan",
   },
   {
-    name: "YouTube",
-    url: "https://www.youtube.com/@blue_gamerwolf",
-    description: "Development showcases, mod previews, gameplay videos, tutorials, and updates.",
-    accent: "red",
-  },
+  name: "YouTube",
+  description:
+    "Content spread across development, Minecraft, livestreams, tutorials, clips, and project showcases.",
+  accent: "red",
+  links: [
+    {
+      label: "Blue Gamerwolf",
+      url: "https://www.youtube.com/@blue_gamerwolf",
+    },
+  ],
+},
   {
     name: "Twitch",
     url: "https://twitch.tv/blue_gamerwolf",
-    description: "Livestreams for Minecraft development, modpacks, testing, and community work.",
+    description:
+      "Livestreams featuring Minecraft development, coding sessions, community events, testing, and gameplay.",
     accent: "purple",
   },
   {
     name: "Kick",
     url: "https://kick.com/blue-gamerwolf",
-    description: "Alternative livestream platform for gameplay, coding sessions, and experiments.",
+    description:
+      "Alternative livestream platform for gameplay, coding sessions, experiments, and community interaction.",
     accent: "green",
   },
 ] satisfies {
   name: string;
-  url: string;
   description: string;
   accent: Accent;
+  url?: string;
+  links?: {
+    label: string;
+    url: string;
+  }[];
 }[];
 
 export const communities = [
