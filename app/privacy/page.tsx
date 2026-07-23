@@ -1,4 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import type { Metadata } from "next";
+import { Hero, SiteShell } from "@/app/components/site-frame";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Privacy Policy for Blue Gamerwolf coded products, projects, mods, websites, tools, and related services.",
+};
+
 const sections = [
   {
     title: "Scope",
