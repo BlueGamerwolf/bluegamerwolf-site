@@ -87,7 +87,7 @@ export function SiteNav({ active }: { active?: string }) {
 
 export function SiteBackground() {
   return (
-    <div aria-hidden="true" className="absolute inset-0">
+    <div aria-hidden="true" className="fixed inset-0">
       <BlackHoleBackground />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,32,0.12)_0%,rgba(5,7,10,0.18)_48%,rgba(0,0,0,0.72)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,transparent_0%,rgba(5,7,10,0.08)_34%,rgba(5,7,10,0.58)_100%)]" />
@@ -262,6 +262,8 @@ function SiteFooter({ label }: { label: string }) {
         </Link>
         <Link href="/privacy" className="hover:text-cyan-200">
           Privacy Policy
+        </Link><Link href="/eula" className="hover:text-cyan-200">
+          EULA
         </Link>
       </div>
     </footer>
