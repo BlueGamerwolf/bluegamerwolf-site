@@ -1,5 +1,5 @@
 export const navItems = [
-  { href: "panel.voidstone.dev", label: "Dashboard" },
+  { href: "https://panel.voidstone.dev", label: "Dashboard", external: true },
   { href: "/about", label: "About" },
   { href: "/partners", label: "Partners" },
   { href: "/vrc", label: "VRChat" },

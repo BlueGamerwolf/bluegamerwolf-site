@@ -36,9 +36,11 @@ export function SiteShell({
     <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <SiteBackground />
       <SiteNav active={active} />
+
       <div className="relative z-10 mx-auto max-w-7xl px-5 pb-20 pt-28 sm:px-6 lg:px-8">
         {children}
       </div>
+
       <SiteFooter label={footerLabel} />
     </main>
   );
@@ -55,6 +57,7 @@ export function SiteNav({ active }: { active?: string }) {
           <span className="grid h-9 w-9 place-items-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 text-sm text-cyan-200">
             BG
           </span>
+
           <span className="text-purple-200 transition group-hover:text-cyan-200">
             Blue Gamerwolf
           </span>
@@ -64,16 +67,32 @@ export function SiteNav({ active }: { active?: string }) {
           {navItems.map((item) => {
             const isActive = active === item.href;
 
+            const className = `whitespace-nowrap rounded-lg border px-3 py-2 transition ${
+              isActive
+                ? "border-cyan-300/50 bg-cyan-300/10 text-cyan-100"
+                : "border-transparent text-zinc-300 hover:border-white/10 hover:bg-white/5 hover:text-white"
+            }`;
+
+            if (item.external) {
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {item.label}
+                </a>
+              );
+            }
+
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`whitespace-nowrap rounded-lg border px-3 py-2 transition ${
-                  isActive
-                    ? "border-cyan-300/50 bg-cyan-300/10 text-cyan-100"
-                    : "border-transparent text-zinc-300 hover:border-white/10 hover:bg-white/5 hover:text-white"
-                }`}
+                className={className}
               >
                 {item.label}
               </Link>
@@ -87,11 +106,18 @@ export function SiteNav({ active }: { active?: string }) {
 
 export function SiteBackground() {
   return (
-    <div aria-hidden="true" className="fixed inset-0">
+    <div
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-0 -z-10"
+    >
       <BlackHoleBackground />
+
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,32,0.12)_0%,rgba(5,7,10,0.18)_48%,rgba(0,0,0,0.72)_100%)]" />
+
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,transparent_0%,rgba(5,7,10,0.08)_34%,rgba(5,7,10,0.58)_100%)]" />
+
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:72px_72px] opacity-20" />
+
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
     </div>
   );
@@ -112,18 +138,26 @@ export function Hero({
       <p className={`text-sm font-bold uppercase tracking-[0.28em] ${colors.text}`}>
         {eyebrow}
       </p>
+
       <h1 className="mt-5 text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
         {title}
       </h1>
+
       <p className={`mx-auto mt-6 max-w-3xl text-xl font-semibold sm:text-2xl ${colors.text}`}>
         {subtitle}
       </p>
+
       {description && (
         <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-zinc-300 sm:text-lg">
           {description}
         </p>
       )}
-      {actions && <div className="mt-8 flex flex-wrap justify-center gap-3">{actions}</div>}
+
+      {actions && (
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          {actions}
+        </div>
+      )}
     </section>
   );
 }
@@ -142,7 +176,10 @@ export function SectionHeader({
       <h2 className={`text-3xl font-black sm:text-4xl ${accentClasses[accent].text}`}>
         {title}
       </h2>
-      {description && <p className="mt-3 max-w-2xl text-zinc-400">{description}</p>}
+
+      {description && (
+        <p className="mt-3 max-w-2xl text-zinc-400">{description}</p>
+      )}
     </div>
   );
 }
@@ -187,8 +224,14 @@ export function CardLink({
       external={external}
       className={`group block h-full rounded-lg border bg-black/45 p-6 text-left shadow-2xl shadow-black/20 backdrop-blur transition duration-200 hover:-translate-y-1 ${colors.border} ${colors.hover}`}
     >
-      <h3 className={`text-2xl font-black ${colors.text}`}>{title}</h3>
-      <p className="mt-4 leading-7 text-zinc-300">{description}</p>
+      <h3 className={`text-2xl font-black ${colors.text}`}>
+        {title}
+      </h3>
+
+      <p className="mt-4 leading-7 text-zinc-300">
+        {description}
+      </p>
+
       {children}
     </LinkOrAnchor>
   );
@@ -211,8 +254,14 @@ export function InfoCard({
     <div
       className={`h-full rounded-lg border bg-black/45 p-6 text-left shadow-2xl shadow-black/20 backdrop-blur ${colors.border}`}
     >
-      <h3 className={`text-2xl font-black ${colors.text}`}>{title}</h3>
-      <p className="mt-4 leading-7 text-zinc-300">{description}</p>
+      <h3 className={`text-2xl font-black ${colors.text}`}>
+        {title}
+      </h3>
+
+      <p className="mt-4 leading-7 text-zinc-300">
+        {description}
+      </p>
+
       {children}
     </div>
   );
@@ -239,7 +288,12 @@ function LinkOrAnchor({
 }) {
   if (external) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
         {children}
       </a>
     );
@@ -256,13 +310,17 @@ function SiteFooter({ label }: { label: string }) {
   return (
     <footer className="relative z-10 border-t border-white/10 bg-black/40 px-6 py-8 text-center text-sm text-zinc-500">
       <div>&copy; 2026 Blue Gamerwolf - {label}</div>
+
       <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2">
         <Link href="/terms" className="hover:text-cyan-200">
           Terms of Service
         </Link>
+
         <Link href="/privacy" className="hover:text-cyan-200">
           Privacy Policy
-        </Link><Link href="/eula" className="hover:text-cyan-200">
+        </Link>
+
+        <Link href="/eula" className="hover:text-cyan-200">
           EULA
         </Link>
       </div>
