@@ -151,29 +151,17 @@ export const platforms = [
     accent: "cyan",
   },
   {
-    name: "YouTube",
-    description:
-      "Content spread across multiple channels including development, Minecraft, livestreams, tutorials, clips, and project showcases.",
-    accent: "red",
-    links: [
-      {
-        label: "Blue Gamerwolf",
-        url: "https://www.youtube.com/@blue_gamerwolf",
-      },
-      {
-        label: "Second Channel",
-        url: "https://www.youtube.com/@YOUR_SECOND_CHANNEL",
-      },
-      {
-        label: "Third Channel",
-        url: "https://www.youtube.com/@YOUR_THIRD_CHANNEL",
-      },
-      {
-        label: "Fourth Channel",
-        url: "https://www.youtube.com/@YOUR_FOURTH_CHANNEL",
-      },
-    ],
-  },
+  name: "YouTube",
+  description:
+    "Content spread across development, Minecraft, livestreams, tutorials, clips, and project showcases.",
+  accent: "red",
+  links: [
+    {
+      label: "Blue Gamerwolf",
+      url: "https://www.youtube.com/@blue_gamerwolf",
+    },
+  ],
+},
   {
     name: "Twitch",
     url: "https://twitch.tv/blue_gamerwolf",
