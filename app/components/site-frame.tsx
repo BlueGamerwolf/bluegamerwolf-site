@@ -108,9 +108,11 @@ export function SiteBackground() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 -z-10"
+      className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
     >
-      <BlackHoleBackground />
+      <div className="absolute inset-0">
+        <BlackHoleBackground />
+      </div>
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,16,32,0.12)_0%,rgba(5,7,10,0.18)_48%,rgba(0,0,0,0.72)_100%)]" />
 
