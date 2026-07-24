@@ -14,10 +14,16 @@
     "voidlink:cf:deploy": "npm run deploy --prefix voidlink-cloudflare-relay"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.11.3",
+    "@prisma/client": "^7.9.0",
+    "bcryptjs": "^3.0.3",
     "next": "16.2.6",
+    "next-auth": "^4.24.15",
+    "prisma": "^7.9.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "ws": "^8.18.0"
+    "ws": "^8.18.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
